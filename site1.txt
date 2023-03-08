@@ -1,0 +1,70 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local potatoWebSite1 = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local ImageButton = Instance.new("ImageButton")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+potatoWebSite1.Name = "potatoWebSite1"
+potatoWebSite1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+potatoWebSite1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = potatoWebSite1
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.318385661, 0, 0.29753089, 0)
+Frame.Size = UDim2.new(0, 545, 0, 387)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(0, 0, 0.209302336, 0)
+TextLabel.Size = UDim2.new(0, 545, 0, 81)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Why would you want a web browser in roblox? Who the heck knows! But now you have it!"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.Size = UDim2.new(0, 545, 0, 81)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Welcome to potato web! Yes, this is like a year late, yes this changed names, yes bacon clan is dead now, but still, he is potato web."
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Position = UDim2.new(0, 0, 0.417323142, 0)
+ImageButton.Size = UDim2.new(0, 244, 0, 225)
+ImageButton.Image = "http://www.roblox.com/asset/?id=11648237415"
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+TextButton.Position = UDim2.new(0.849541306, 0, 0.870801032, 0)
+TextButton.Size = UDim2.new(0, 82, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+-- Scripts:
+
+local function GJNPV_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	function Click(mouse)
+	
+		script.Parent.Parent.Parent.Frame.Visible = false
+	end
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(GJNPV_fake_script)()
